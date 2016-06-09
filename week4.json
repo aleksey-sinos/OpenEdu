@@ -1,0 +1,18 @@
+{
+    "libraryDisplayName" : "Мет. обр. нав. инф. Sci-нед. 4",
+    "libraryName" : "ROBCTR-03-S3", //не ясно, что это.
+    "displayName": "Scilab-упражнение 4 недели. Обобщенный метод наименьших квадратов",
+    "maxAttempts": "2",
+    "rerandomize": "", //не ясно, как это использовать
+    "showAnswer": "never",
+    "weight": "10", //не ясно, что это.
+    "tolerance": ".05", //параметр, определяющий интервал для правильного ответа? Нужно ли писать текст ниже одной строкой?
+    "text": "Предположим, что в задаче оценивания постоянной величины [mathjaxinline]x[/mathjaxinline], по измерениям [mathjaxinline]y_i=x+v_i[/mathjaxinline] имеется [mathjaxinline]2m[/mathjaxinline] измерений. Для первых [mathjaxinline]m[/mathjaxinline] измерений дисперсия погрешности равна <strong>%s</strong>, а для вторых <strong>%s</strong>. Используя файл с измерениями, получите оценку для [mathjaxinline]x[/mathjaxinline] с помощью обобщенного метода наименьших квадратов.",
+	"responses": [
+        {
+            "name": "[mathjaxinline]\hat{x}[/mathjaxinline] = "
+        }
+        
+    ],
+    "isData": "true"
+}
