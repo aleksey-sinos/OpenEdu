@@ -29,20 +29,19 @@ x_est(i) = ((s2_var/(s1_var+s2_var))/i)*sum(s1_m(1:i))+...
 end
 
 %% Графики %%
-if sh_plot == 1
     figure(1); clf;
     hold on; grid;
     plot(s1_m,'g*');
     plot(s2_m,'b.');
     plot(1:mn,x_est,'r','linewidth',2);
     legend('sensor 1','sensor 2','estimate')
-end
+
 
 %% Запись данных %%
-if wr_data == 1
-    s_data = [s1_m',s2_m'];
-    %dlmwrite('s_data.txt',s_data, ',')
-    save s_data.txt s_data -ASCII
-end
+% if wr_data == 1
+%     s_data = [s1_m',s2_m'];
+%     %dlmwrite('s_data.txt',s_data, ',')
+%     save s_data.txt s_data -ASCII
+% end
 
 

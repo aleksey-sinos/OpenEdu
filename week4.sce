@@ -23,7 +23,7 @@ s2_var = grand(1,1,"uin", 1, 50);
 s1_m = x+sqrt(s1_var)*rand(1,mn,"normal");
 s2_m = x+sqrt(s2_var)*rand(1,mn,"normal");
 
-x_est = zeros(1,mn);
+x_est = zeros(mn,1);
 //// Оценивание ////
 for i=1:mn
 x_est(i) = ((s2_var/(s1_var+s2_var))/i)*sum(s1_m(1:i))+...
@@ -31,10 +31,12 @@ x_est(i) = ((s2_var/(s1_var+s2_var))/i)*sum(s1_m(1:i))+...
 end
 
 //// Запись данных ////
-s_data = [s1_m',s2_m'];
-write('s_data.txt', s_data);
+s_data = [s1_m';s2_m'];
+write('data.txt', s_data);
 write('answer.txt', x_est(mn))
-write('fillings.txt', [s1_var,s2_var]);
+write('fillings.txt', [s1_var;s2_var]);
+
+quit();
 
 
 

@@ -8,9 +8,12 @@ clear;
 %% Моделирование измерений %%
 %априорное математическое ожидание
 x_exp = 1e2*randn;
+
 %дисперсия априорной оценки
-x_var = 1e10;
-%x_var = 1e-10;
+sn = 5; %количество вариантов
+x_var_max = rand*3;
+x_var_min = -3;
+x_var = logspace(x_var_min,x_var_max,sn);
 
 %истинное значение величины
 x_true = 3.14;
@@ -24,18 +27,21 @@ m_var = 10;
 %Моделирование
 x_m = x_true+sqrt(m_var)*randn(1,mn);
 
-x_est = zeros(1,mn);
+x_est = zeros(sn,mn);
 %% Оценивание %%
+for j=1:sn
 for i=1:mn
-x_est(i) = (x_exp+(x_var/(x_var+(1/i)*m_var))*(sum(x_m(1:i)-x_exp))/i);
+x_est(j,i) = (x_exp+(x_var(j)/(x_var(j)+(1/i)*m_var))*(sum(x_m(1:i)-x_exp))/i);
+end
 end
     
 %% Графики %%
 
 figure(1); clf;
 hold on; grid;
-plot(x_m,'*');
-plot(1:mn,x_est);
-plot(x_exp,'or');
-legend('measurements','estimate','x exp')
-
+plot(x_m,'*','DisplayName','measurements');
+for i = 1:sn
+plot(1:mn,x_est(i,:),'DisplayName',['var =' num2str(x_var(i))]);
+end
+plot(x_exp,'or','DisplayName','x exp');
+legend(gca,'show');
