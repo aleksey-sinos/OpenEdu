@@ -7,11 +7,7 @@
     "showAnswer": "never",
     "weight": "10", 
     "tolerance": ".05",
-    "text": "Задана скалярная гауссовская случайная величина [mathjaxinline]x[/mathjaxinline] с плотностью 
-	[mathjaxinline]f(x)=N(x;\overline{x},\sigma^2_0)[/mathjaxinline] и ее измерения [mathjaxinline]y_i=x+v_i, i=\overline{1...m}[/mathjaxinline], 
-	в которых [mathjaxinline]v_i, i=\overline{1...m}[/mathjaxinline] - независимые между собой и от [mathjaxinline]x[/mathjaxinline]
-	гауссовские случайные величины с ф.п.р.в. [mathjaxinline]f(v_i)=N(v_i,0,r^2)[/mathjaxinline].
-	Получите оптимальные байесовские оценки [mathjaxinline]x[/mathjaxinline] для случаев, когда [mathjaxinline]\sigma^2_0 \to 0[/mathjaxinline]
+    "text": "Задана скалярная гауссовская случайная величина [mathjaxinline]x[/mathjaxinline] с плотностью [mathjaxinline]f(x)=N(x;\\overline{x},\\sigma^2_0)[/mathjaxinline] и ее измерения [mathjaxinline]y_i=x+v_i, i=\\overline{1...m}[/mathjaxinline], в которых [mathjaxinline]v_i, i=\\overline{1...m}[/mathjaxinline] - независимые между собой и от [mathjaxinline]x[/mathjaxinline]гауссовские случайные величины с ф.п.р.в. [mathjaxinline]f(v_i)=N(v_i,0,r^2)[/mathjaxinline]. Получите оптимальные байесовские оценки [mathjaxinline]x[/mathjaxinline] для случаев, когда [mathjaxinline]\sigma^2_0 \to 0[/mathjaxinline]
 	и [mathjaxinline]\sigma^2_0 \to \infty[/mathjaxinline]. Выберите выражения, соответствующие полученным оценкам.
 	[mathjaxinline]
 	1. \hat{x}^B=\bar{x} 

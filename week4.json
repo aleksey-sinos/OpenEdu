@@ -7,11 +7,7 @@
     "showAnswer": "never",
     "weight": "10", 
     "tolerance": ".05", 
-    "text": "Предположим, что в задаче оценивания постоянной величины [mathjaxinline]x[/mathjaxinline], 
-	по измерениям [mathjaxinline]y_i=x+v_i[/mathjaxinline] имеется [mathjaxinline]2m[/mathjaxinline] измерений.
-	Для первых [mathjaxinline]m[/mathjaxinline] измерений дисперсия погрешности равна <strong>%s</strong>, 
-	а для вторых <strong>%s</strong>. Используя файл с измерениями, получите оценку для 
-	[mathjaxinline]x[/mathjaxinline] с помощью обобщенного метода наименьших квадратов.",
+    "text": "Модифицируйте выражение для оценки по ОМНК из предыдущего задания для случая, когда имеется m измерений с дисперсией <strong>%s</strong> и n измерений с дисперсией <strong>%s</strong>. Для определенности m>n. Используя полученное выражение, рассчитайте оценку постоянной величины [mathjaxinline]x[/mathjaxinline] с помощью обобщенного метода наименьших квадратов по измерениям [mathjaxinline]y_i=x+v_i[/mathjaxinline]. Дополнительно получите оценку [mathjaxinline]x[/mathjaxinline] с помощью матричной формы ОМНК. Убедитесь, что оценки совпадают. Файлы с измерениями и исходным кодом доступны ниже.",
 	"responses": [
         {
             "name": "[mathjaxinline]\\hat{x}[/mathjaxinline] = "
