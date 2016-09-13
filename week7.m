@@ -9,17 +9,20 @@
 
 mn = 100; %Количество измерений
 
-sigma_h0 = 10; %Начальная дисперсия оценки высоты
-sigma_v = 5; %Начальная дисперсия оценки скорости
+h0_var = 10; %Начальная дисперсия оценки высоты
+v_var = 5; %Начальная дисперсия оценки скорости
 
 %Дисперсия измерителей
 SNS_var = 2;
 BAR_var = 5;
 
-P_x = [sigma_h0 0;...
-        0 sigma_v]; %Начальная матрица ковариаций х
+P_x = [h0_var 0;...
+        0 v_var]; %Начальная матрица ковариаций х
+
+%Выделение памяти
 P = zeros(2,2,mn);
 P_ba = zeros(2,2,mn);
+
 for i = 1:mn
 R_sns = eye(i)*SNS_var; %Матрица ковариаций снс
 
@@ -41,14 +44,17 @@ h_b_sko = squeeze(sqrt(P_ba(1,1,1:mn)));
 v_b_sko = squeeze(sqrt(P_ba(2,2,1:mn)));
 
 figure(1); clf;
+subplot(2,1,1);
+title('3\sigma ошибки оценки высоты')
 hold on; grid;
-plot(1:mn,3*h_f_sko,'b',1:mn,-3*h_f_sko,'b');
-plot(1:mn,3*h_b_sko,'r',1:mn,-3*h_b_sko,'r');
+plot(1:mn,3*h_f_sko,'b',1:mn, 3*h_b_sko,'r',1:mn,-3*h_f_sko,'b',1:mn,-3*h_b_sko,'r');
+legend('3\sigma высоты с СНС','3\sigma высоты без СНС')
 
-figure(2); clf;
+subplot(2,1,2);
+title('3\sigma ошибки оценки вертикальной скорости')
 hold on; grid;
-plot(1:mn,3*v_f_sko,'b',1:mn,-3*v_f_sko,'b');
-plot(1:mn,3*v_b_sko,'r',1:mn,-3*v_b_sko,'r');
+plot(1:mn,3*v_f_sko,'b',1:mn,3*v_b_sko,'r',1:mn,-3*v_f_sko,'b',1:mn,-3*v_b_sko,'r');
+legend('3\sigma скорости с СНС','3\sigma скорости без СНС')
 
 fprintf('Матрица ковариаций ошибок оцениивания после %g измерений: \n',mn);
 disp(P(:,:,mn));
