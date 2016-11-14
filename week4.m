@@ -14,8 +14,8 @@ x = round(randn*100,2);
 mn = 100;
 
 %Дисперсия измерителей
-s1_var = 5;
-s2_var = 27;
+s1_var = abs(round(0.5+randn,2));             %Для заполнения
+s2_var = abs(round(3+randn*2,2));            %Для заполнения
 
 %Моделирование
 s1_m = x+sqrt(s1_var)*randn(1,mn);
@@ -33,8 +33,8 @@ H = ones(2*mn,1);
 Q = blkdiag(eye(mn)*s1_var,eye(mn)*s2_var)^-1;
 x_est_m = ((H'*Q*H)^-1)*H'*Q*[s1_m,s2_m]';
 
-fprintf('Оценка: %d \n',x_est_m);
-fprintf('Разница оценок 2-х методов: %d \n',x_est_m-x_est(end));
+fprintf('Оценка: %.3f \n',x_est_m);
+fprintf('Разница оценок 2-х методов: %f \n',x_est_m-x_est(end));
 
 %% Графики %%
     figure(1); clf;
@@ -42,15 +42,18 @@ fprintf('Разница оценок 2-х методов: %d \n',x_est_m-x_est(end));
     plot(s1_m,'g*');
     plot(s2_m,'b.');
     plot(1:mn,x_est,'r','linewidth',2);
-    legend('Датчик 1','Датчик 2','Оценка');
-    title('Оценивание обобщенным МНК');
+    legend('Измерения датчика 1','Измерения датчика 2','Оценка');
+    title('Оценивание обобщенным МНК'); xlabel('Изерения');
 
 
 %% Запись данных %%
-% if wr_data == 1
-%     s_data = [s1_m',s2_m'];
-%     %dlmwrite('s_data.txt',s_data, ',')
-%     save s_data.txt s_data -ASCII
-% end
+data = [s1_m',s2_m'];
+answer = x_est_m;
+fillings = [s1_var; s2_var];
+
+save('data4.txt','data','-ascii');
+save('answer4.txt','answer','-ascii');
+save('fillings4.txt','fillings','-ascii');
+
 
 

@@ -36,7 +36,7 @@ write('data.txt', s_data);
 write('answer.txt', x_est(mn))
 write('fillings.txt', [s1_var;s2_var]);
 
-quit();
+%quit();
 
 
 

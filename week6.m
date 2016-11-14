@@ -7,21 +7,22 @@ clear; close all;
 
 %% Моделирование измерений %%
 %истинное значение величины
-x_true = 10;
+x_true = 10;                        %Для заполнения
 %априорное математическое ожидание
-x_exp = 1e2*randn;
+x_exp = 1e2*randn; %Для заполнения
 
 %дисперсия априорной оценки
 sn = 5; %количество вариантов
-x_var_max = 2;
-x_var_min = -3;
+x_var_max = 2;                      %Для заполнения 100
+x_var_min = -3;                     %Для заполнения 0.001
 x_var = logspace(x_var_min,x_var_max,sn);
+
 
 %количество измерений
 mn = 100;
 
 %Дисперсия измерений
-m_var = 10;
+m_var = 10;                         %Для заполнения
 
 %Моделирование
 y = x_true+sqrt(m_var)*randn(1,mn);
@@ -44,4 +45,8 @@ end
 plot(x_exp,'or','DisplayName','$\widehat{x}_0$');
 I = legend(gca,'show');
 set(I,'interpreter','latex');
+
+%% Запись данных %%
+T = table(y','VariableNames',{'Measurements'});
+writetable(T,'week6.txt','Delimiter',' ')
 
