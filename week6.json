@@ -7,26 +7,13 @@
     "showAnswer": "never",
     "weight": "10", 
     "tolerance": ".05",
-    "text": "Задана скалярная гауссовская случайная величина [mathjaxinline]x[/mathjaxinline] с плотностью [mathjaxinline]f(x)=N(x;\\overline{x},\\sigma^2_0)[/mathjaxinline] и ее измерения [mathjaxinline]y_i=x+v_i, i=\\overline{1...m}[/mathjaxinline], в которых [mathjaxinline]v_i, i=\\overline{1...m}[/mathjaxinline] - независимые между собой и от [mathjaxinline]x[/mathjaxinline]гауссовские случайные величины с ф.п.р.в. [mathjaxinline]f(v_i)=N(v_i,0,r^2)[/mathjaxinline]. Получите оптимальные байесовские оценки [mathjaxinline]x[/mathjaxinline] для случаев, когда [mathjaxinline]\sigma^2_0 \to 0[/mathjaxinline]
-	и [mathjaxinline]\sigma^2_0 \to \infty[/mathjaxinline]. Выберите выражения, соответствующие полученным оценкам.
-	[mathjaxinline]
-	1. \hat{x}^B=\bar{x} 
-	2. \hat{x}^B=\frac{1}{m}\sum\limits_{i=1}^{m}{{{y}_{i}}}
-	3. \hat{x}^B=\frac{\sum\limits_{i=1}^{m}{{{y}_{i}}}+\bar{x}}{m+1}
-	4. \hat{x}^B=\frac{1}{m+1}\sqrt{\sum\limits_{i=1}^{m}{y_{i}^{2}}+{{{\bar{x}}}^{2}}}
-	[/mathjaxinline]" 
+    "text": "Получите оптимальные байесовские оценки случайной величины [mathjaxinline]x[/mathjaxinline] с плотностью [mathjaxinline]f(x)=N(x;\\overline{x},\\sigma^2_0)[/mathjaxinline] по ее измерениям [mathjaxinline]y_i=x+v_i, i=\\overline{1 \\ldots m}[/mathjaxinline], в которых [mathjaxinline]v_i, \; i=\\overline{1 \\ldots m}[/mathjaxinline] - независимые между собой и от [mathjaxinline]x[/mathjaxinline]гауссовские случайные величины с ф.п.р.в. [mathjaxinline]f(v_i)=N(v_i,0,r^2)[/mathjaxinline]. Рассчитайте оценки для случаев когда [mathjaxinline]\\sigma^2_0=0.001[/mathjaxinline] и [mathjaxinline]\\sigma^2_0=100[/mathjaxinline]. При рассчетах положите [mathjaxinline]\\overline{x}=<strong>%s</strong>, r^2 = <strong>%s</strong>[/mathjaxinline]" 
 	"responses": [
         {
-            "name": "[mathjaxinline]\\sigma^2_0 \\to 0, \\hat{x}[/mathjaxinline] = "
+            "name": "[mathjaxinline]\\hat{x}, \\sigma^2_0=0.001[/mathjaxinline] = "
         }
 		{
-            "name": "Выражение для оценки при [mathjaxinline]\\sigma^2_0 \\to 0[/mathjaxinline]:"
-        }
-        {
-            "name": "[mathjaxinline]\\sigma^2_0 \\to \\infty, \\hat{x}[/mathjaxinline] = "
-        }
-		{
-            "name": "Выражение для оценки при [mathjaxinline]\\sigma^2_0 \\to \\infty[/mathjaxinline]:"
+            "name": "[mathjaxinline]\\hat{x}, \\sigma^2_0=100[/mathjaxinline] = "
         }
     ],
     "isData": "true"

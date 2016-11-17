@@ -7,19 +7,10 @@
     "showAnswer": "never",
     "weight": "10", 
     "tolerance": ".05", 
-    "text": "Выберите выражение для оценки, максимизирующей функцию правдоподобия, в задаче оценивания постоянной скалярной величины [mathjaxinline]x[/mathjaxinline] по измерениям  [mathjaxinline]y_i=x+v_i, i=overline{1 \ldots m} [/mathjaxinline], где [mathjaxinline]v_i, i=overline{1 \ldots m}[/mathjaxinline] представляют собой независимые между собой равномерно распределенные в интервале [mathjaxinline][-0.5,  0.5][/mathjaxinline] случайные величины.
-	[mathjaxinline]
-	
-	1) \\hat{x}=\frac{1}{m}\sum\limits_{i=1}^{m}{{{y}_{i}}} 
-	2) \\hat{x}\in \left[ \begin{matrix} \max ({{y}_{i}})-0.5 & \min ({{y}_{i}})+0.5  \\ \end{matrix} \right]
-	3) \\hat{x}=median({{y}_{i}})
-	4) \\hat{x}\in \left[ \begin{matrix} 0.5+\max ({{y}_{i}}) & 0.5-\min ({{y}_{i}})  \\ \end{matrix} \right]
-	5) \\hat{x}=\frac{0.25}{m}\sum\limits_{i=1}^{m}{{{y}_{i}}}
-
-	[/mathjaxinline]",
+    "text": "Воспользуйтесь выражением из предыдущего задания и рассчитайте оценку максимизирующей функцию правдоподобия, в задаче оценивания постоянной скалярной величины [mathjaxinline]x[/mathjaxinline] по измерениям  [mathjaxinline]y_i=x+v_i, \\; i=overline{1 \ldots m} [/mathjaxinline], где [mathjaxinline]v_i[/mathjaxinline] представляют собой независимые между собой равномерно распределенные в интервале [mathjaxinline][-0.5,  0.5][/mathjaxinline] случайные величины. В ответ запишите максимальное значение для оцениваемой величины после 100 измерений.",
 	"responses": [
         {
-            "name": "Ответ: "
+            "name": "[mathjaxinline]max(\\hat{x})=[/mathjaxinline]"
         }
         
     ],
