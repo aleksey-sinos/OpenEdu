@@ -9,7 +9,7 @@ clear; close all;
 %истинное значение величины
 x_true = 10;                        %Для заполнения
 %априорное математическое ожидание
-x_exp = 1e2*randn; %Для заполнения
+x_exp = 3*sign(randn)*x_true+round(4*randn); %Для заполнения
 
 %дисперсия априорной оценки
 sn = 5; %количество вариантов
@@ -22,7 +22,7 @@ x_var = logspace(x_var_min,x_var_max,sn);
 mn = 100;
 
 %Дисперсия измерений
-m_var = 10;                         %Для заполнения
+m_var = 10+randn;                         %Для заполнения
 
 %Моделирование
 y = x_true+sqrt(m_var)*randn(1,mn);
@@ -31,7 +31,7 @@ x_est = zeros(sn,mn);
 %% Оценивание %%
 for j=1:sn
 for i=1:mn
-x_est(j,i) = (x_exp+(x_var(j)/(x_var(j)+(1/i)*m_var))*(sum(y(1:i)-x_exp))/i);
+x_est(j,i) = x_exp+(x_var(j)/(x_var(j)+(1/i)*m_var))*(sum(y(1:i)-x_exp))/i;
 end
 end
     
@@ -46,7 +46,16 @@ plot(x_exp,'or','DisplayName','$\widehat{x}_0$');
 I = legend(gca,'show');
 set(I,'interpreter','latex');
 
+
+fprintf('Оценка при sigma^2_0 = 0.001: %.3f \n',x_est(1,end));
+fprintf('Оценка при sigma^2_0 = 100: %.3f \n',x_est(sn,end));
+
 %% Запись данных %%
-T = table(y','VariableNames',{'Measurements'});
-writetable(T,'week6.txt','Delimiter',' ')
+data = y';
+answer = [x_est(1,end)'; x_est(sn,end)'];
+fillings = [x_exp; m_var];
+
+save('data6.txt','data','-ascii');
+save('answer6.txt','answer','-ascii');
+save('fillings6.txt','fillings','-ascii');
 
