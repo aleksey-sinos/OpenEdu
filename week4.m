@@ -14,8 +14,8 @@ x = round(randn*100,2);
 mn = 100;
 
 %Дисперсия измерителей
-s1_var = abs(round(0.5+randn,2));             %Для заполнения
-s2_var = abs(round(3+randn*2,2));            %Для заполнения
+s1_var = abs(round(0.5+0.1*randn,2));             %Для заполнения
+s2_var = abs(round(3+0.2*randn,2));            %Для заполнения
 
 %Моделирование
 s1_m = x+sqrt(s1_var)*randn(1,mn);
