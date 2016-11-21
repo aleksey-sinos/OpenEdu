@@ -21,7 +21,6 @@ Q = 1; //Матрица ковариаций шумов
 
 //Выделение памяти
 x = zeros(2,mn); x(:,1) = x_0;
-x_ex = zeros(2,mn,5);
 P = zeros(2,2,mn); P(:,:,1) = P_0;
 
 //// Моделирование ////
@@ -30,38 +29,6 @@ for i = 2:mn
     x(:,i) = F*x(:,i-1);
     P(:,:,i) = F*P(:,:,i-1)*F'+G*Q*G';
 end
-//Реализации
-for j = 1:5
-    x_ex(:,1,j) = x_0+sqrt(P_0)*rand(2,1,'nor');
-    for i = 2:mn
-        x_ex(:,i,j) =F*x_ex(:,i-1,j)+G*rand(1,'nor');
-    end
-end
-
-//// Графики ////
-figure(1); clf;
-subplot(2,1,2);
-title('Динамика и СКО высоты')
-set(gca(),"auto_clear","off"); xgrid(1,0.1,10);
-plot(1:mn,x(1,:),'b');
-plot(1:mn,3*sqrt(squeeze(P(1,1,:)))'+x(1,:),'r');
-for j = 1:5
-    plot(1:mn,x_ex(1,:,j),'g');
-end
-plot(1:mn,-3*sqrt(squeeze(P(1,1,:)))'+x(1,:),'r');
-legend('Математическое ожидание','3 sigma','Примеры возможных реализаций');
-
-subplot(2,1,1);
-title('Динамика и СКО вертикальной скорости')
-set(gca(),"auto_clear","off"); xgrid(1,0.1,10);
-plot(1:mn,x(2,:),'b');
-plot(1:mn,3*sqrt(squeeze(P(2,2,:)))'+x(2,:),'r');
-for j = 1:5
-   plot(1:mn,x_ex(2,:,j),'g');
-end
-plot(1:mn,-3*sqrt(squeeze(P(2,2,:)))'+x(2,:),'r');
-legend('Математическое ожидание','3 sigma','Примеры возможных реализаций');
-mprintf('3*СКО > 300 через %f секунд \n',find(3*sqrt(P(1,1,:))>300,1));
 
 //// Запись данных ////
 deletefile('data.txt'); deletefile('fillings.txt'); deletefile('answer.txt');
@@ -70,6 +37,8 @@ fillings = [x_0; G(2)];
 
 write('answer.txt',answer);
 write('fillings.txt',fillings);
+
+quit();
 
 
 

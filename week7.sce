@@ -24,7 +24,6 @@ h = (h0+V*(0:mn-1))';
 y_sns = h+sqrt(SNS_var)*rand(mn,1,'nor');
 y_ba = h+sqrt(BA_var)*rand(mn,1,'nor');
 
-
 //// Оценивание ////
 h0_exp = 1000;  //Априорное математическое ожидание 
 V_exp = 0;      //Априорное математическое ожидание 
@@ -53,39 +52,10 @@ end
 
 //Рассчетные СКО оценивания для полного набора измерений
 h_f_sko = squeeze(sqrt(P(1,1,1:mn)));
-v_f_sko = squeeze(sqrt(P(2,2,1:mn)));
 
 //Рассчетные СКО оценивания при отсутствии SNS
-h_b_sko = squeeze(sqrt(P_ba(1,1,1:mn)));
 v_b_sko = squeeze(sqrt(P_ba(2,2,1:mn)));
 
-//Действительные ошибки оценивания
-h_est_err = x_est(1,:)-h0;
-V_est_err = x_est(2,:)-V;
-
-//// Графики ////
-figure(1); clf;
-subplot(2,1,1);
-title('3 sigma ошибки оценки начальной высоты')
-set(gca(),"auto_clear","off"); xgrid(1,0.1,10); xlabel('№ измерения'); ylabel('м');
-plot(1:mn,3*h_f_sko','b',1:mn, 3*h_b_sko','r',1:mn,h_est_err,'g',1:mn,-3*h_f_sko','b',1:mn,-3*h_b_sko','r');
-
-legend('3 sigma высоты с СНС','3 sigma высоты без СНС','Действительная ошибка')
-
-subplot(2,1,2);
-title('3 sigma ошибки оценки вертикальной скорости')
-set(gca(),"auto_clear","off"); xgrid(1,0.1,10); xlabel('№ измерения'); ylabel('м/с');
-plot(1:mn,3*v_f_sko','b',1:mn,3*v_b_sko','r',1:mn,V_est_err,'g',1:mn,-3*v_f_sko','b',1:mn,-3*v_b_sko','r');
-legend('3 sigma скорости с СНС','3 sigma скорости без СНС','Действительная ошибка')
-
-mprintf('Истинное значение высоты: %f, вертикальной скорости: %f \n',h0, V);
-mprintf('Оценка высоты: %f, вертикальной скорости: %f \n',x_est(1,$), x_est(2,$));
-mprintf('Матрица ковариаций ошибок оцениивания после %g измерений:',mn);
-disp(P(:,:,mn));
-
-mprintf('3 сигма высоты после %g измерений: %g \n',mn,3*h_f_sko(mn));
-mprintf('3 сигма вертикальной скорости с СНС после %g измерений: %g \n',mn, 3*v_f_sko(mn));
-mprintf('3 сигма вертикальной скорости без СНС после %g измерений: %g \n',mn, 3*v_b_sko(mn));
 
 //// Запись данных ////
 deletefile('data.txt'); deletefile('fillings.txt'); deletefile('answer.txt');
@@ -96,3 +66,5 @@ fillings = [h0_var; V_var; SNS_var; BA_var];
 write('data.txt',data);
 write('answer.txt',answer);
 write('fillings.txt',fillings);
+
+quit();
