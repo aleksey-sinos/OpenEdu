@@ -2,7 +2,9 @@
 //// Неделя 1.1
 //// Случайные величины и методы их описания.
 ///////////////////////////////////////////////////////////////////////////////
-clear; exec roundd.sci;
+clear; 
+
+deff('[numd] = roundd(num,n)','numd = round(num *10^n) / 10^n');
 
 //// Генерация параметров нормальной ф.п.р.в.////
 mu = roundd(rand(1,1,"nor")*10,1);
@@ -19,6 +21,7 @@ fillings = [mu; sigma];
 
 write('answer.txt',answer);
 write('fillings.txt',fillings);
+
 
 
 
