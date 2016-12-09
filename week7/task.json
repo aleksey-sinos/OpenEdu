@@ -1,0 +1,27 @@
+{
+    "libraryDisplayName" : "Мет. обр. нав. инф. Sci-нед. 7",
+    "libraryName" : "INS-7",
+    "displayName": "Scilab-упражнение 7 недели. Алгоритмы комплексной обработки. Анализ точности",
+    "maxAttempts": "2",
+    "rerandomize": "", 
+    "showAnswer": "never",
+    "weight": "10", 
+    "tolerance": ".05",
+    "text": "Получите оптимальную байесовскую оценку вектора [mathjaxinline]X={{\\left[ {{h}_{0}}\\,\\,V \\right]}^{\\text{T}}}[/mathjaxinline], полагая, что [mathjaxinline]\\sigma _{h_{0}}^{2}=<strong>%s</strong>[/mathjaxinline],\\; \\sigma _{V}^{2}=<strong>%s</strong>,\\; r_{SNS}^2 = <strong>%s</strong>,\\; r_{BA}^2 = <strong>%s</strong>[/mathjaxinline]. С использованием выражения для матрицы ковариаций оптимальной оценки  [mathjaxinline]P=\\left( (P^x )^{-1} +H^{\\text{T}}(R^{SNS})^{-1}H+H^{\\text{T}}(R^{BA})^{-1}H\\right)^{-1}[/mathjaxinline] исследуйте рассчетную точность оценивания и ответьте на следующие вопросы.1. Насколько точно известна начальная высота летательного аппарата после <strong>20</strong> измерений? ([mathjaxinline]3 \\sigma_{x_0} [/mathjaxinline]) 2. Насколько точно известна вертикальная скорость летательного аппарата после <strong>30</strong> измерений баровысотомера (без измерний СНС)? ([mathjaxinline]3 \\sigma^{}_V [/mathjaxinline])"
+
+	"responses": [
+        {
+            "name": "[mathjaxinline] \\hat{x_0}= [/mathjaxinline]"
+        }
+		{
+            "name": "[mathjaxinline] \\hat{V}= [/mathjaxinline]"
+        }
+		{
+            "name": "[mathjaxinline]3 \\sigma_{x_0} = [/mathjaxinline]"
+        }
+        {
+            "name": "[mathjaxinline]3 \\sigma^{}_V = [/mathjaxinline]"
+        }
+	],
+    "isData": "true"
+}
