@@ -32,7 +32,7 @@ end
 
 figure(1); clf;
 plot(1:mn,y,'b.',1:mn,x_true*ones(1,mn),...
-    'r.',1:mn,x_ma,1:mn,x_MLE_Up','g',1:mn,x_MLE_Down','g');
+    'r',1:mn,x_ma,1:mn,x_MLE_Up','g',1:mn,x_MLE_Down','g');
 set(gca(),"auto_clear","off"); xgrid(1,0.1,10);
 legend('Измерения','Истинное значение','Среднее арифметическое','границы оценки МФП');
 title('Оценивание по методу максимума функции правдоподобия');
@@ -48,5 +48,6 @@ data = y';
 answer = x_MLE_Up(mn);
 write('data.txt',data);
 write('answer.txt',answer);
+write('fillings.txt',[]);
 
 
