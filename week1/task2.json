@@ -1,13 +1,13 @@
 {
     "libraryDisplayName" : "Мет. обр. нав. инф. Sci-нед. 4",
     "libraryName" : "INS-1.2", 
-    "displayName": "Упражнение 2 1 недели. Случайные величины и методы их описания",
+    "displayName": "Упражнение 2 первой недели. Случайные величины и методы их описания",
     "maxAttempts": "2",
     "rerandomize": "", 
     "showAnswer": "never",
     "weight": "10", 
     "tolerance": ".05", 
-    "text": "Расчитайте вероятность попадания случайной величины[mathjaxinline]x[/mathjaxinline] в интервал [mathjaxinline][<strong>%s</strong>, <strong>%s</strong>[/mathjaxinline], если ее функция плотности распределения фероятности является равномерной на интервале  [mathjaxinline][<strong>%s</strong>, <strong>%s</strong>[/mathjaxinline].
+    "text": "Расчитайте вероятность попадания случайной величины[mathjaxinline]x[/mathjaxinline] в интервал [mathjaxinline][<strong>%s</strong>, <strong>%s</strong>[/mathjaxinline], если ее функция плотности распределения вероятности является равномерной на интервале [mathjaxinline][<strong>%s</strong>, <strong>%s</strong>[/mathjaxinline].
 	",
 	"responses": [
         {
