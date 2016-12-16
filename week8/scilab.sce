@@ -37,9 +37,7 @@ fillings = [x_0; G(2)];
 
 write('answer.txt',answer);
 write('fillings.txt',fillings);
+write('data.txt',[]);
 
 quit();
-
-
-
 

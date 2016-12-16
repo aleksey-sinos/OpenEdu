@@ -33,6 +33,7 @@ data = y';
 answer = x_MLE_Up(mn);
 write('data.txt',data);
 write('answer.txt',answer);
+write('fillings.txt',[]);
 
 quit();
 
