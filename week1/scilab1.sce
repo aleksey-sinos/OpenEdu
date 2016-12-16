@@ -15,12 +15,15 @@ x = mu+0.72;
 y = 1/(sigma*sqrt(2*%pi))*exp((-(x-mu)^2)/(2*sigma^2));
 
 //// Запись данных ////
-deletefile('fillings.txt'); deletefile('answer.txt');
+deletefile('data.txt'); deletefile('fillings.txt'); deletefile('answer.txt');
 answer = y;
 fillings = [mu; sigma];
 
 write('answer.txt',answer);
 write('fillings.txt',fillings);
+write('data.txt',[]);
+
+//quit();
 
 
 
