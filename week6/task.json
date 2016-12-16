@@ -7,13 +7,13 @@
     "showAnswer": "never",
     "weight": "10", 
     "tolerance": ".05",
-    "text": "Получите оптимальные байесовские оценки случайной величины [mathjaxinline]x[/mathjaxinline] с плотностью [mathjaxinline]f(x)=N(x;\\overline{x},\\sigma^2_0)[/mathjaxinline] по ее измерениям [mathjaxinline]y_i=x+v_i, i=\\overline{1 \\ldots m}[/mathjaxinline], в которых [mathjaxinline]v_i, \\, i=\\overline{1 \\ldots m}[/mathjaxinline] - независимые между собой и от [mathjaxinline]x[/mathjaxinline]гауссовские случайные величины с ф.п.р.в. [mathjaxinline]f(v_i)=N(v_i,0,r^2)[/mathjaxinline]. Рассчитайте оценки для случаев когда [mathjaxinline]\\sigma^2_0=0.001[/mathjaxinline] и [mathjaxinline]\\sigma^2_0=100[/mathjaxinline]. При рассчетах положите [mathjaxinline]\\overline{x}=<strong>%s</strong>, r^2 = <strong>%s</strong>[/mathjaxinline]" 
+    "text": "Получите оптимальные байесовские оценки случайной величины [mathjaxinline]x[/mathjaxinline] с плотностью [mathjaxinline]f(x)=N(x;\\overline{x},\\sigma^2_0)[/mathjaxinline] по ее измерениям [mathjaxinline]y_i=x+v_i, i=\\overline{1 \\ldots m}[/mathjaxinline], в которых [mathjaxinline]v_i, \\, i=\\overline{1 \\ldots m}[/mathjaxinline] - независимые между собой и от [mathjaxinline]x[/mathjaxinline] гауссовские случайные величины с ф.п.р.в. [mathjaxinline]f(v_i)=N(v_i,0,r^2)[/mathjaxinline]. Рассчитайте оценки для случаев когда [mathjaxinline]\\sigma^2_0=0.001[/mathjaxinline] и [mathjaxinline]\\sigma^2_0=100[/mathjaxinline]. При рассчетах положите [mathjaxinline]\\overline{x}=<strong>%s</strong>, r^2 = <strong>%s</strong>[/mathjaxinline]. " 
 	"responses": [
         {
-            "name": "[mathjaxinline]\\hat{x}, \\sigma^2_0=0.001[/mathjaxinline] = "
+            "name": "[mathjaxinline]\\sigma^2_0=0.001 \\, \\hat{x} = [/mathjaxinline]  "
         }
 		{
-            "name": "[mathjaxinline]\\hat{x}, \\sigma^2_0=100[/mathjaxinline] = "
+            "name": "[mathjaxinline]\\sigma^2_0=100, \\, \\hat{x} = [/mathjaxinline]  "
         }
     ],
     "isData": "true"
