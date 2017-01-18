@@ -1,5 +1,5 @@
 {
-    "libraryDisplayName" : "Мет. обр. нав. инф. Sci-нед. 4",
+    "libraryDisplayName" : "Мет. обр. нав. инф. Sci-нед. 1",
     "libraryName" : "INS-1.1", 
     "displayName": "Упражнение 1 первой недели. Случайные величины и методы их описания",
     "maxAttempts": "2",
@@ -7,7 +7,7 @@
     "showAnswer": "never",
     "weight": "10", 
     "tolerance": ".05", 
-    "text": "Расчитайте значение гауссовсой функции плотности распределения фероятности с параметрами [mathjaxinline]\\hat{x} = <strong>%s</strong>, \\sigma = <strong>%s</strong>, [/mathjaxinline] в точке <strong>%s</strong>.
+    "text": "Расчитайте значение гауссовсой функции плотности распределения фероятности с параметрами [mathjaxinline]\\hat{x} = %s, \\sigma = %s, [/mathjaxinline] в точке <strong>%s</strong>.
 	",
 	"responses": [
         {
