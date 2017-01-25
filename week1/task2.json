@@ -7,7 +7,7 @@
     "showAnswer": "never",
     "weight": "10", 
     "tolerance": ".05", 
-    "text": "Расчитайте вероятность попадания случайной величины[mathjaxinline]x[/mathjaxinline] в интервал [mathjaxinline][%s, \\; %s][/mathjaxinline], если ее функция плотности распределения вероятности является равномерной на интервале [mathjaxinline][%s, \\; %s][/mathjaxinline].
+    "text": "Расчитайте вероятность попадания случайной величины [mathjaxinline]x[/mathjaxinline] в интервал [mathjaxinline][%s, \\; %s][/mathjaxinline], если ее функция плотности распределения вероятности является равномерной на интервале [mathjaxinline][%s, \\; %s][/mathjaxinline].
 	",
 	"responses": [
         {
