@@ -11,7 +11,7 @@
 
 	"responses": [
         {
-            "name": "[mathjaxinline] t=50 c, \\,\\hat{x}=[/mathjaxinline] "
+            "name": "[mathjaxinline] t=50 \\, c, \\,\\hat{x}=[/mathjaxinline] "
         }
 		{
             "name": "[mathjaxinline] \\frac{\\sigma^2_{est}}{\\sigma^2_{mnt}}=[/mathjaxinline]"

@@ -20,7 +20,7 @@ P=Fx2-Fx1;
 //// Запись данных ////
 deletefile('data.txt'); deletefile('fillings.txt'); deletefile('answer.txt');
 answer = P;
-fillings = [a; b; x1; x2];
+fillings = [x1; x2; a; b];
 
 write('answer.txt',answer);
 write('fillings.txt',fillings);
