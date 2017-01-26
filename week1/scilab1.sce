@@ -23,7 +23,7 @@ write('answer.txt',answer);
 write('fillings.txt',fillings);
 write('data.txt',[]);
 
-//quit();
+quit();
 
 
 
