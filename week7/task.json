@@ -7,7 +7,7 @@
     "showAnswer": "never",
     "weight": "10", 
     "tolerance": ".05",
-    "text": "Получите оптимальную байесовскую оценку вектора [mathjaxinline] X={{\\left[ {{h}_{0}} \\; V \\right]}^{\\text{T}}}[/mathjaxinline], полагая, что [mathjaxinline] \\sigma _{h_{0}}^{2}=%s, \\; \\sigma _{V}^{2}=%s, \\; r_{SNS}^2 = %s,\\; r_{BA}^2 = %s[/mathjaxinline]. С использованием выражения для матрицы ковариаций оптимальной оценки  [mathjaxinline]P=\\left( (P^x )^{-1} +H^{\\text{T}}(R^{SNS})^{-1}H+H^{\\text{T}}(R^{BA})^{-1}H\\right)^{-1}[/mathjaxinline] исследуйте рассчетную точность оценивания и ответьте на вопросы.  В ответ записать значение [mathjaxinline]3 \\sigma [/mathjaxinline]"
+    "text": "Получите оптимальную байесовскую оценку вектора [mathjaxinline] X={{\\left[ {{h}_{0}} \\; V \\right]}^{\\text{T}}}[/mathjaxinline], полагая, что [mathjaxinline] \\sigma _{h_{0}}^{2}=%s, \\; \\sigma _{V}^{2}=%s, \\; r_{SNS}^2 = %s,\\; r_{BA}^2 = %s, \\; \\bar{x} = \\left[%s \\; %s\\right] [/mathjaxinline]. С использованием выражения для матрицы ковариаций оптимальной оценки  [mathjaxinline]P=\\left( (P^x )^{-1} +H^{\\text{T}}(R^{SNS})^{-1}H+H^{\\text{T}}(R^{BA})^{-1}H\\right)^{-1}[/mathjaxinline] исследуйте рассчетную точность оценивания и ответьте на вопросы.  В ответ записать значение [mathjaxinline]3 \\sigma [/mathjaxinline]"
 
 	"responses": [
         {

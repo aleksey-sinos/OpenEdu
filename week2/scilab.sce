@@ -20,8 +20,6 @@ var_rvect = variance(rvect);
 [cf, ind] = histc(noc,rvect,normalization=%t); [m,k] = max(cf);
 mp_rvect = ((max(rvect)-min(rvect))/noc*(k-0.5))+min(rvect);
 
-
-
 //// Запись данных //// 
 deletefile('data.txt'); deletefile('fillings.txt'); deletefile('answer.txt');
 
