@@ -89,9 +89,9 @@ mprintf('3 сигма вертикальной скорости без СНС п
 
 //// Запись данных ////
 deletefile('data.txt'); deletefile('fillings.txt'); deletefile('answer.txt');
-data = [y_sns, y_ba];
+data = [h0; V; y_sns; y_ba];
 answer = [x_est(1,$); x_est(2,$); 3*h_f_sko(20); 3*v_b_sko(30)];
-fillings = [h0_var; V_var; SNS_var; BA_var];
+fillings = [h0_var; V_var; SNS_var; BA_var; h0_exp; V_exp];
 
 write('data.txt',data);
 write('answer.txt',answer);
