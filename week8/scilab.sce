@@ -32,7 +32,7 @@ end
 
 //// Запись данных ////
 deletefile('data.txt'); deletefile('fillings.txt'); deletefile('answer.txt');
-answer = [x(1,$); 3*sqrt(squeeze(P(1,1,$)));find(3*sqrt(P(1,1,:))>300,1)];
+answer = [x(1,100); 3*sqrt(squeeze(P(1,1,100)));find(3*sqrt(P(1,1,:))>300,1)];
 fillings = [x_0; G(2)];
 
 write('answer.txt',answer);
