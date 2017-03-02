@@ -97,7 +97,7 @@ mprintf('Высота на 50 секунде полета: %f\n',x_est(1,51));
 
 //// Запись данных ////
 deletefile('data.txt'); deletefile('fillings.txt'); deletefile('answer.txt');
-data = y';
+data = [x(1,:)'; x(2,:)'; y'];
 answer = [x_est(1,51); sqrt(P_est(1,1,$))/sqrt(R)];
 fillings = [R; sqrt(G(2))*3];
 
