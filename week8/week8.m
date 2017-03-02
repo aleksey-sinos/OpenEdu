@@ -4,7 +4,7 @@
 %% Моделирование динамики матрицы ковариаций в байесовском подходе.
 %% Рекуррентный  метод. Векторный случай
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-clear; close all;
+clear; %close all;
 %% Параметры  %%
 
 mn = 100; %Количество измерений
@@ -34,7 +34,7 @@ end
 for j = 1:5
     x_ex(:,1,j) = x_0+sqrt(P_0)*randn(2,1);
     for i = 2:mn
-        x_ex(:,i,j) =F*x_ex(:,i-1,j)+G*randn;
+        x_ex(:,i,j) =F*x_ex(:,i-1,j)+sqrt(G)*randn;
     end
 end
 
@@ -63,12 +63,12 @@ end
 legend(h(:),'Математическое ожидание','3\sigma','Примеры возможных реализаций');
 fprintf('3*СКО > 300 через %f секунд \n',find(3*sqrt(P(1,1,:))>300,1));
 
-%% Запись данных %%
-answer = [x(1,end); 3*sqrt(squeeze(P(1,1,end)));find(3*sqrt(P(1,1,:))>300,1)];
-fillings = [x_0; G(2)];
-
-save('answer8_2.txt','answer','-ascii');
-save('fillings8_2.txt','fillings','-ascii');
+% %% Запись данных %%
+% answer = [x(1,end); 3*sqrt(squeeze(P(1,1,end)));find(3*sqrt(P(1,1,:))>300,1)];
+% fillings = [x_0; G(2)];
+% 
+% save('answer8_2.txt','answer','-ascii');
+% save('fillings8_2.txt','fillings','-ascii');
 
 
 

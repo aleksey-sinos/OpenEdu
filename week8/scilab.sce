@@ -36,7 +36,7 @@ end
 for j = 1:5
     x_ex(:,1,j) = x_0+sqrt(P_0)*rand(2,1,'nor');
     for i = 2:mn
-        x_ex(:,i,j) =F*x_ex(:,i-1,j)+G*rand(1,'nor');
+        x_ex(:,i,j) =F*x_ex(:,i-1,j)+sqrt(G)*rand(1,'nor');
     end
 end
 
