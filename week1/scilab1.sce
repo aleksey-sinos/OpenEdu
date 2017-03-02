@@ -5,6 +5,7 @@
 clear; 
 
 deff('[numd] = roundd(num,n)','numd = round(num *10^n) / 10^n');
+rand("seed",getdate("s"));
 
 //// Генерация параметров нормальной ф.п.р.в.////
 mu = roundd(rand(1,1,"nor")*10,1);
