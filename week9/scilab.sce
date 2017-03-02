@@ -4,7 +4,10 @@
 //// Дискретный фильтр Калмана.
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-clear; deff('[numd] = roundd(num,n)','numd = round(num *10^n) / 10^n');
+clear;
+deff('[numd] = roundd(num,n)','numd = round(num *10^n) / 10^n');
+rand("seed",getdate("s")); grand("setsd",getdate("s"));
+
 
 //// Параметры  ////
 
