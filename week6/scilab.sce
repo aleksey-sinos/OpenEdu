@@ -24,7 +24,7 @@ x_var = logspace(x_var_min,x_var_max,sn);
 mn = 100;
 
 //Дисперсия измерений
-m_var = 10+grand(1,1,"nor",0,1);                         //Для заполнения
+m_var = roundd(10+grand(1,1,"nor",0,1),2);
 
 //Моделирование
 y = x_true+sqrt(m_var)*grand(1,mn,"nor",0,1);
