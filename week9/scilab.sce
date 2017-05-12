@@ -33,7 +33,7 @@ P = zeros(2,2,b_size); P(:,:,1) = P_0;
 
 x(:,1) = x_0+sqrt(P_0)*rand(2,1,'nor'); //Генерация случайного начального значения
 for i = 2:b_size
-   x(:,i) =F*x(:,i-1)+sqrt(G)*rand(1,'nor');
+   x(:,i) =F*x(:,i-1)+G*rand(1,'nor');
    y(i) = x(1,i)+sqrt(R)*rand(1,'nor');
    P(:,:,i) = F*P(:,:,i-1)*F'+G*Q*G';
 end
@@ -63,7 +63,7 @@ end
 deletefile('data.txt'); deletefile('fillings.txt'); deletefile('answer.txt');
 data = [x(1,:)'; x(2,:)'; y'];
 answer = [x_est(1,51); sqrt(P_est(1,1,$))/sqrt(R)];
-fillings = [R; sqrt(G(2))*3];
+fillings = [R; G(2)*3];
 
 write('data.txt',data);
 write('answer.txt',answer);
