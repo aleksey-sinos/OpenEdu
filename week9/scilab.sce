@@ -77,13 +77,14 @@ legend('3 sigma оценки','Действительная ошибка');
 
 subplot(1,2,2); set(gca(),"auto_clear","off"); xgrid(1,0.1,10); title('СКО высоты')
 plot(0:mn,3*sqrt(squeeze(P_est(1,1,:)))','r');
-plot(0:mn,-3*sqrt(squeeze(P_est(1,1,:)))','r');
 plot(0:mn,3*sqrt(R)*ones(1,b_size),'b');
-plot(0:mn,-3*sqrt(R)*ones(1,b_size),'b');
 plot(0:mn,h_est_err,'g');
+plot(0:mn,-3*sqrt(squeeze(P_est(1,1,:)))','r');
+plot(0:mn,-3*sqrt(R)*ones(1,b_size),'b');
+
 ylabel('СКО (м)'); xlabel('Время (c)');
 legend('3 sigma оценки','3 sigma измерений','Действительная ошибка');
 
-mprintf('Отношение СКО погрешности оценивания \nк СКО погрешности измерений: %f / %f = %f \n',sqrt(P_est(1,1,$)),sqrt(R),sqrt(P_est(1,1,$))/sqrt(R));
+mprintf('Отношение СКО погрешности оценивания к СКО погрешности измерений: %f / %f = %f \n',sqrt(P_est(1,1,$)),sqrt(R),sqrt(P_est(1,1,$))/sqrt(R));
 mprintf('Оценка высоты на 50 секунде полета: %f\n',x_est(1,51));
 
